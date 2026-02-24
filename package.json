@@ -12,10 +12,12 @@
 		"astro": "astro"
 	},
 	"dependencies": {
+		"@iconify-json/mdi": "^1.2.3",
 		"astro": "^5.17.1",
 		"astro-icon": "^1.1.5"
 	},
 	"devDependencies": {
+		"@iconify-json/fe": "^1.2.4",
 		"autoprefixer": "^10.4.24",
 		"open-props": "^1.7.23",
 		"postcss": "^8.5.6",

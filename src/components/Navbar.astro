@@ -1,0 +1,63 @@
+---
+import { Icon } from 'astro-icon/components';
+const navLinks = [
+	{
+		name: 'Home',
+		url: '/',
+		style: 'transparent',
+	},
+	{
+		name: 'Pricing',
+		url: '/pricing',
+		style: 'transparent',
+	},
+	{
+		name: 'About',
+		url: '/about',
+		style: 'transparent',
+	},
+	{
+		name: 'Contact Us',
+		url: '/contact',
+		style: 'primary',
+	},
+];
+---
+
+<nav>
+	<div class="container nav-container">
+		<Icon class="logo" name="logo" />
+		<div class="nav-wrapper">
+			<button
+				class="btn btn--menu"
+				id="menu-btn"
+				aria-expanded="false"
+				aria-label="Open mobile nav"
+			>
+				<Icon name="fe:text-align-justify" />
+			</button>
+			<ul class="nav-links" role="navigation">
+				{
+					navLinks.map((link) => (
+						<li role="none">
+							<a href={link.url} class={`btn btn--${link.style} nav-link`}>
+								{link.name}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<script>
+	const navBtn = document.querySelector('#menu-btn');
+
+	if (navBtn) {
+		navBtn.addEventListener('click', () => {
+			const expanded = navBtn.getAttribute('aria-expanded') === 'false' ? 'true' : 'false';
+			navBtn.setAttribute('aria-expanded', expanded);
+		});
+	}
+</script>
