@@ -216,12 +216,12 @@ small {
 }
 
 .blur::after {
-	background-color: hsl(var(--accent1) / 0.3);
+	background-color: hsl(var(--accent1) / 0.2);
 	transform: rotate(-20deg);
 }
 
 .blur::before {
-	background-color: hsl(var(--accent2) / 0.3);
+	background-color: hsl(var(--accent2) / 0.2);
 	transform: rotate(20deg);
 }
 
@@ -296,6 +296,19 @@ li[role='none'],
 		display: inline-block;
 		font-size: var(--font-size-0);
 	}
+}
+
+/* Programmer Section */
+
+.programmer::after,
+.programmer::before {
+	opacity: 0.8;
+}
+
+.programmer-icon {
+	width: var(--size-fluid-9);
+	filter: drop-shadow(10px 10px 25px hsl(var(--accent2) / 0.2));
+	height: var(--size-fluid-9);
 }
 
 /* Footer */
